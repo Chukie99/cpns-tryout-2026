@@ -1,0 +1,12 @@
+{
+  "name": "cpns-tryout-2026",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@capacitor/core": "6.2.2",
+    "@capacitor/android": "6.2.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.2"
+  }
+}

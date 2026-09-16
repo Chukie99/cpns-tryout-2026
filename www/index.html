@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>CPNS Tryout 2026 — 1000 Soal Bank</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1A495D;--teal:#0B8EC2;--cream:#FFF9E6;--yellow:#FFD23F;--green:#06D6A0;--pink:#EF476F;--line:#E8DFCA;--ink:#1A1A1A}
+body{font-family:Nunito,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
+.header{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #0F2A36}
+.brand{font-weight:900;letter-spacing:.3px;font-size:15px}
+.badge{font-size:11px;background:var(--yellow);color:var(--navy);padding:3px 8px;border-radius:999px;font-weight:800;border:2px solid var(--navy)}
+.screen{display:none;min-height:calc(100dvh - 52px);padding:14px;max-width:980px;margin:0 auto}
+.screen.active{display:block}
+.card{background:#fff;border:2.5px solid var(--navy);border-radius:14px;box-shadow:0 6px 0 var(--navy);padding:16px}
+.hero h1{font-size:22px;font-weight:900;color:var(--navy);line-height:1.15}
+.hero h1 span{background:var(--yellow);padding:0 6px;border-radius:6px}
+.sub{color:#4A6572;font-size:13px;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{border:2px solid var(--navy);border-radius:12px;padding:10px;background:#fff;text-align:center}
+.kpi b{font-size:18px;color:var(--navy)}
+.kpi span{display:block;font-size:11px;color:#6B7D94;font-weight:700}
+.btn{appearance:none;border:2.5px solid var(--navy);background:var(--yellow);color:var(--navy);font-weight:900;padding:12px 16px;border-radius:12px;box-shadow:0 4px 0 var(--navy);cursor:pointer;width:100%;font-size:14px}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--navy)}
+.btn.secondary{background:#fff}
+.btn.green{background:var(--green);color:#073B4C}
+.btn:disabled{opacity:.5;pointer-events:none}
+.pill{border:2px solid var(--navy);border-radius:999px;padding:6px 10px;font-weight:800;font-size:12px;background:#fff}
+.topbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:10px}
+.timer{font-weight:900;font-variant-numeric:tabular-nums;background:var(--navy);color:#fff;padding:8px 12px;border-radius:10px;border:2px solid #0F2A36}
+.timer.warn{background:var(--pink)}
+.qcat{font-size:11px;font-weight:900;letter-spacing:.6px;color:var(--teal);text-transform:uppercase}
+.qtext{font-size:16px;font-weight:800;color:var(--navy);margin:6px 0 10px;line-height:1.35}
+.choices{display:flex;flex-direction:column;gap:10px}
+.choice{border:2.5px solid var(--navy);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:flex-start;background:#fff;cursor:pointer;transition:.12s}
+.choice:hover{transform:translateY(-1px)}
+.choice.sel{outline:3px solid var(--yellow);background:#FFFBEB}
+.bullet{width:28px;height:28px;border-radius:50%;border:2px solid var(--navy);display:grid;place-items:center;font-weight:900;font-size:13px;flex:0 0 28px;background:#fff}
+.navgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.navbtn{border:2px solid var(--navy);border-radius:10px;padding:8px 0;text-align:center;font-weight:900;font-size:12px;background:#fff;cursor:pointer}
+.navbtn.done{background:var(--navy);color:#fff}
+.navbtn.current{outline:3px solid var(--yellow)}
+.legend{display:flex;gap:8px;flex-wrap:wrap;font-size:11px;color:#5A6B7A;margin-top:8px}
+.tag{border:2px solid var(--navy);border-radius:999px;padding:4px 8px;background:#fff;font-weight:800;font-size:11px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.bar{height:10px;background:#E8EEF2;border-radius:999px;overflow:hidden;border:1.5px solid var(--navy)}
+.bar>i{display:block;height:100%;background:var(--teal)}
+.small{font-size:11px;color:#6B7D94}
+.divider{height:2px;background:var(--line);margin:10px 0;border-radius:999px}
+.review{border:2px solid var(--navy);border-radius:12px;padding:10px;background:#fff;margin-bottom:10px}
+.review h4{font-size:13px;color:var(--navy)}
+.exp{font-size:12px;color:#2B3A42;background:#F5F9FF;border:1.5px solid #D6E4FF;border-radius:8px;padding:8px;margin-top:6px}
+.footer-note{font-size:11px;color:#6B7D94;text-align:center;margin-top:10px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr}.navgrid{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="brand">CPNS TRYOUT 2026 • CAT</div>
+  <div class="badge">110 SOAL • OFFLINE</div>
+</header>
+
+<section id="home" class="screen active">
+  <div class="card hero">
+    <h1><span>Tryout SKD CPNS</span> 2026/2027 — 110 Soal Relevan — SKD 110 Soal (30+35+45)</h1>
+    <p class="sub">TWK 30 • TIU 35 • TKP 45 • Timer CAT 100 menit • Skor auto + pembahasan • Offline tanpa internet</p>
+    <div class="grid2" style="margin-top:12px">
+      <div class="kpi"><b>30</b><span>TWK (Pancasila, UUD, NKRI, BerAKHLAK, IKN)</span></div>
+      <div class="kpi"><b>35</b><span>TIU (Verbal, Numerik, Figural)</span></div>
+      <div class="kpi"><b>35</b><span>TKP (Pelayanan, Integritas, Kolaboratif)</span></div>
+      <div class="kpi"><b>90'</b><span>Timer CAT + autosave</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+      <button class="btn green" id="btnStart">▶ MULAI TRYOUT</button>
+      <button class="btn secondary" id="btnContinue" style="display:none">↻ LANJUTKAN</button>
+    </div>
+    <p class="small" style="margin-top:8px">Passing grade acuan SKD 2024: TWK 65 • TIU 80 • TKP 166 (total 311). Skor 5 poin/benar.</p>
+    <div class="divider"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span class="tag">No ads</span><span class="tag">No login</span><span class="tag">Pembahasan per soal</span><span class="tag">Bisa diulang</span>
+    </div>
+    <p class="footer-note">Materi update 2026/2027: UU ASN 20/2023, IKN, BerAKHLAK. Bukan bocoran — latihan pola CAT BKN.</p>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <b style="color:var(--navy)">Cara pakai 30 detik</b>
+    <ol style="margin:8px 0 0 18px;font-size:13px;color:#2B3A42">
+      <li>Tap MULAI → jawab 1-100, bisa loncat via grid nomor</li>
+      <li>Jawaban kesimpen otomatis, timer jalan 90 menit</li>
+      <li>Submit → lihat skor TWK/TIU/TKP + pembahasan → Ulang lagi</li>
+    </ol>
+  </div>
+</section>
+
+<section id="quiz" class="screen">
+  <div class="topbar">
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <span id="qCat" class="qcat">TWK</span>
+      <span id="qProgress" class="pill">1 / 100</span>
+      <button class="pill" id="btnGrid">☰ Grid</button>
+    </div>
+    <div id="timer" class="timer">90:00</div>
+  </div>
+  <div class="card">
+    <div id="qText" class="qtext">Memuat soal...</div>
+    <div id="choices" class="choices"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+      <button class="btn secondary" id="btnPrev">‹ Sebelumnya</button>
+      <button class="btn" id="btnNext">Selanjutnya ›</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+      <button class="btn secondary" id="btnClear">Hapus Jawaban</button>
+      <button class="btn green" id="btnSubmit">SELESAI & LIHAT HASIL</button>
+    </div>
+  </div>
+  <div id="gridPanel" class="card" style="margin-top:10px;display:none">
+    <b style="color:var(--navy);font-size:13px">Navigasi — tap nomor untuk loncat (biru = sudah dijawab)</b>
+    <div id="navGrid" class="navgrid" style="margin-top:8px"></div>
+    <div class="legend"><span>⬜ Belum</span><span>⬛ Sudah</span><span>⭐ Ragu</span></div>
+    <label style="display:flex;gap:8px;align-items:center;margin-top:8px;font-size:13px"><input type="checkbox" id="chkDoubt"> Tandai ragu-ragu</label>
+  </div>
+</section>
+
+<section id="result" class="screen">
+  <div class="card">
+    <h2 style="color:var(--navy)">Hasil Tryout</h2>
+    <p id="resultSummary" class="small"></p>
+    <div class="result-grid" style="margin-top:10px">
+      <div class="kpi"><b id="scoreTWK">0</b><span>TWK / 150</span><div class="bar" style="margin-top:6px"><i id="barTWK" style="width:0%"></i></div><span class="small" id="passTWK"></span></div>
+      <div class="kpi"><b id="scoreTIU">0</b><span>TIU / 175</span><div class="bar" style="margin-top:6px"><i id="barTIU" style="width:0%"></i></div><span class="small" id="passTIU"></span></div>
+      <div class="kpi"><b id="scoreTKP">0</b><span>TKP / 175</span><div class="bar" style="margin-top:6px"><i id="barTKP" style="width:0%"></i></div><span class="small" id="passTKP"></span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px">
+      <div class="kpi"><b id="totalScore">0</b><span>TOTAL / 500</span></div>
+      <div class="kpi"><b id="totalCorrect">0/110</b><span>Benar</span></div>
+      <div class="kpi"><b id="totalTime">00:00</b><span>Waktu pakai</span></div>
+    </div>
+    <p id="passOverall" style="margin-top:10px;font-weight:900;text-align:center"></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+      <button class="btn" id="btnReview">Lihat Pembahasan</button>
+      <button class="btn green" id="btnRetry">Ulang Tryout</button>
+    </div>
+    <button class="btn secondary" id="btnHome" style="margin-top:10px">← Kembali ke Beranda</button>
+  </div>
+  <div id="reviewList" style="margin-top:12px"></div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

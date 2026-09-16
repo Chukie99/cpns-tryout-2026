@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockup UI — CPNS Tryout 2026 • 1000 Soal Bank</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1A495D;--teal:#0B8EC2;--yellow:#FFD23F;--cream:#FFF9E6;--green:#06D6A0;--pink:#EF476F;--line:#E8DFCA;--ink:#1A1A1A}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#F3EEE3;color:var(--ink);line-height:1.5}
+a{color:var(--teal);text-decoration:none}
+.top{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;border-bottom:4px solid var(--yellow)}
+.top-inner{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.badge{background:var(--yellow);color:var(--navy);font-weight:800;border-radius:999px;padding:4px 10px;font-size:12px;letter-spacing:.4px}
+.top h1{font-size:18px;letter-spacing:.2px}
+.top p{font-size:12px;opacity:.9}
+.btn{appearance:none;border:2px solid var(--navy);background:var(--yellow);color:var(--navy);font-weight:800;border-radius:12px;padding:10px 14px;cursor:pointer}
+.btn.out{background:#fff;border-color:var(--line);color:var(--navy)}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 20px}
+.hero{background:#fff;border:2px solid var(--navy);border-radius:18px;box-shadow:6px 6px 0 var(--navy);padding:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.hero h2{color:var(--navy);font-size:22px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.kpi{border:2px solid var(--navy);border-radius:14px;padding:10px;text-align:center;font-weight:800}
+.kpi.twk{background:var(--navy);color:#fff}
+.kpi.tiu{background:var(--teal);color:#fff}
+.kpi.tkp{background:var(--green);color:#fff}
+.note{background:var(--cream);border:2px dashed var(--line);border-radius:14px;padding:12px;font-size:13px}
+.note b{color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.phone{border-radius:32px;border:3px solid var(--navy);background:#111;box-shadow:0 18px 40px rgba(0,0,0,.18);overflow:hidden;display:flex;flex-direction:column}
+.phone-head{height:18px;background:#0f2f3f}
+.phone-screen{background:var(--cream);flex:1;display:flex;flex-direction:column;min-height:560px}
+.screen-head{height:56px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:12px}
+.pill{background:var(--yellow);color:var(--navy);font-weight:800;border-radius:999px;padding:3px 8px;font-size:11px}
+.card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px}
+.card.navy{border-color:var(--navy);box-shadow:4px 4px 0 var(--navy)}
+.q{border:2px solid var(--navy);background:#fff;border-radius:12px;padding:12px}
+.choice{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 10px;display:flex;gap:10px;align-items:center;margin-top:8px}
+.choice.sel{background:var(--yellow);border-color:var(--navy)}
+.bullet{width:26px;height:26px;border-radius:999px;border:1.5px solid var(--navy);display:grid;place-items:center;font-weight:800;font-size:12px;background:#fff;color:var(--navy)}
+.choice.sel .bullet{background:var(--navy);color:#fff}
+.bar{height:10px;background:var(--line);border-radius:999px;overflow:hidden}
+.bar>i{height:100%;display:block;border-radius:999px}
+.tag{font-size:11px;border-radius:999px;padding:2px 8px;font-weight:800}
+.live{margin-top:18px;background:#fff;border:2px solid var(--navy);border-radius:18px;box-shadow:6px 6px 0 var(--navy);overflow:hidden}
+.live-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--navy);color:#fff}
+.live iframe{width:100%;height:620px;border:0;background:var(--cream)}
+.foot{padding:22px 0;color:#6b7a8a;font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <div class="badge">MOCKUP UI</div>
+      <div>
+        <h1>CPNS Tryout 2026 — 1000 Soal Bank</h1>
+        <p>300 TWK • 350 TIU • 350 TKP • Timer CAT 100 menit • Passing 65/80/166 • APK Offline</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a href="../www/index.html" class="btn">▶ Live Demo (www)</a>
+      <a href="./PRS_CPNS_Tryout_2026_1000_Soal.md" class="btn out">PRS .md</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h2>Spektakuler, bukan Excel 12KB polos.</h2>
+      <p style="margin-top:6px;font-size:13px;color:#4a5a6a">Bank 1000 soal relevan 2026/27 (UU ASN 20/2023 BerAKHLAK, IKN UU 3/2022, HOTS hoaks & intoleransi, TOEFL-style per subtes). Tiap <b>MULAI random 110 soal (30+35+45)</b> — tiap tryout beda, offline 100%.</p>
+      <div class="kpis">
+        <div class="kpi twk">300<br><span style="font-weight:600;font-size:12px">TWK HOTS</span></div>
+        <div class="kpi tiu">350<br><span style="font-weight:600;font-size:12px">TIU</span></div>
+        <div class="kpi tkp">350<br><span style="font-weight:600;font-size:12px">TKP 5-3-2-1</span></div>
+      </div>
+      <p style="margin-top:10px;font-size:12px"><span class="tag" style="background:var(--navy);color:#fff">1000 → random 110</span> <span class="tag" style="background:var(--yellow);color:var(--navy);border:1px solid var(--navy)">Timer 100:00</span> <span class="tag" style="background:#fff;border:1px solid var(--line)">Skor 550 + bar</span></p>
+    </div>
+    <div class="note">
+      <b>Flow:</b> Home → MULAI (random) → Quiz 1/110 (pilih A-D, ragu *, grid loncat) → Kumpulkan → Result (550 + passing) → Pembahasan per soal (✅/❌/⬜).<br><br>
+      <b>Palette:</b> Navy #1A495D • Teal #0B8EC2 • Yellow #FFD23F • Cream #FFF9E6<br>
+      <b>File:</b> <code>www/content/questions.json</code> 301KB • <code>www/index.html</code> • <code>www/js/app.js</code><br>
+      <b>Build:</b> Capacitor <code>com.chukie99.cpnstryout</code> • GH Actions 6 menit • APK &lt;15MB
+    </div>
+  </section>
+
+  <section class="grid">
+    <!-- 01 HOME -->
+    <div class="phone">
+      <div class="phone-head"></div>
+      <div class="phone-screen">
+        <div class="screen-head"><span>CPNS TRYOUT 2026</span><span class="pill">110 SOAL</span></div>
+        <div style="padding:12px;display:grid;gap:10px">
+          <div class="card navy">
+            <div style="font-weight:900;color:var(--navy)">Tryout SKD CAT</div>
+            <div style="font-size:12px;color:var(--teal)">TWK 300 • TIU 350 • TKP 350 — Bank 1000</div>
+            <div style="font-size:11px;color:#6b7a8a;margin-top:4px">Tiap MULAI random 110 (30+35+45) • Timer 100 menit • Passing 65/80/166</div>
+            <div style="display:flex;gap:6px;margin-top:8px">
+              <span class="tag" style="background:var(--navy);color:#fff">OFFLINE</span>
+              <span class="tag" style="background:var(--cream);border:1px solid var(--line)">No login</span>
+            </div>
+          </div>
+          <button class="btn" style="width:100%;justify-content:center">▶ MULAI TRYOUT (RANDOM 110)</button>
+          <button class="btn out" style="width:100%">↻ LANJUTKAN (0/110)</button>
+          <div class="card"><b>🎯 Update 2026/27</b><div style="font-size:12px;color:#4a5a6a">TOEFL-style 2 tahun + per subtes + HOTS hoaks/I KN</div></div>
+          <div class="card"><b>⚡ Offline 100%</b><div style="font-size:12px;color:#4a5a6a">Tanpa kuota, autosave, ulang beda soal</div></div>
+          <div class="card"><b>📊 Skor CAT asli</b><div style="font-size:12px;color:#4a5a6a">550 max • bar TWK/TIU/TKP • pembahasan</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 QUIZ -->
+    <div class="phone">
+      <div class="phone-head"></div>
+      <div class="phone-screen">
+        <div class="screen-head"><span>1 / 110 <span style="opacity:.8">• TWK HOTS</span></span><span class="pill" style="background:var(--yellow);color:var(--navy)">98:42</span></div>
+        <div style="padding:12px;display:grid;gap:10px">
+          <div class="q">
+            <div style="font-size:11px;color:var(--teal);font-weight:800">1. [TWK — HOTS 2026]</div>
+            <div style="font-size:13px;margin-top:6px"><b>Di grup WA kantor beredar hoaks tunjangan ASN naik 200%. Sikap ASN BerAKHLAK yang benar...</b></div>
+            <div style="font-size:11px;color:#7895B2;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px">Pilih 1 jawaban, tandai ragu jika perlu</div>
+          </div>
+          <div class="choice"><div class="bullet">A</div><div style="font-size:13px">Sebarkan biar viral</div></div>
+          <div class="choice sel"><div class="bullet">B</div><div style="font-size:13px"><b>Cek fakta kanal resmi BKN/MenPANRB</b></div></div>
+          <div class="choice"><div class="bullet">C</div><div style="font-size:13px">Diam saja</div></div>
+          <div class="choice"><div class="bullet">D</div><div style="font-size:13px">Blokir pengirim tanpa klarifikasi</div></div>
+          <label style="display:flex;gap:8px;align-items:center;font-size:12px"><input type="checkbox"> Tandai RAGU (*)</label>
+          <div style="display:flex;gap:8px">
+            <button class="btn out" style="flex:1">‹ Sebelumnya</button>
+            <button class="btn" style="flex:1">Selanjutnya ›</button>
+          </div>
+          <div class="card" style="background:var(--navy);color:#fff">
+            <div style="font-size:11px;color:var(--yellow);font-weight:800">GRID 110</div>
+            <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-top:6px">
+              <div class="tag" style="background:var(--yellow);color:var(--navy);text-align:center">1</div>
+              <div class="tag" style="background:#fff;color:var(--navy);text-align:center">2</div>
+              <div class="tag" style="background:#fff;color:var(--navy);text-align:center">3</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">4</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">5</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">6</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">7</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">8</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">9</div>
+              <div class="tag" style="background:var(--line);color:#6b7a8a;text-align:center">10</div>
+            </div>
+            <div style="font-size:10px;opacity:.9;margin-top:6px">kuning=current • putih=sudah • abu=belum • *=ragu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 RESULT -->
+    <div class="phone">
+      <div class="phone-head"></div>
+      <div class="phone-screen">
+        <div class="screen-head" style="justify-content:center">HASIL TRYOUT</div>
+        <div style="padding:12px;display:grid;gap:10px">
+          <div class="card navy" style="background:var(--navy);color:#fff;text-align:center">
+            <div style="font-size:11px;color:var(--yellow);letter-spacing:.5px">SKOR TOTAL</div>
+            <div style="font-size:26px;font-weight:900">412 / 550</div>
+            <div style="font-size:11px;opacity:.9">98 benar dari 110 • 86:14 dipakai</div>
+          </div>
+          <div class="card">TWK 98/150<div class="bar"><i style="width:65%;background:var(--teal)"></i></div></div>
+          <div class="card">TIU 132/175<div class="bar"><i style="width:75%;background:var(--green)"></i></div></div>
+          <div class="card">TKP 182/225<div class="bar"><i style="width:80%;background:var(--navy)"></i></div></div>
+          <div class="card" style="background:var(--green);color:#fff;text-align:center;border-color:var(--navy)">
+            <div style="font-weight:900">🎉 LULUS PASSING GRADE</div>
+            <div style="font-size:12px">TWK 65 ✓ • TIU 80 ✓ • TKP 166 ✓ • Total 311 ✓</div>
+          </div>
+          <button class="btn" style="width:100%">📖 LIHAT PEMBAHASAN 110 SOAL</button>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button class="btn out">🔁 Ulang (random baru)</button>
+            <button class="btn" style="background:var(--navy);color:#fff;border-color:var(--navy)">🏠 Beranda</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 REVIEW -->
+    <div class="phone">
+      <div class="phone-head"></div>
+      <div class="phone-screen">
+        <div class="screen-head"><span>PEMBAHASAN</span><span style="font-size:11px;opacity:.9">110 soal</span></div>
+        <div style="padding:12px;display:grid;gap:10px">
+          <div class="card" style="border-color:var(--green)"><div style="font-weight:800;color:var(--green)">1. [TWK] ✅ Benar</div><div style="font-size:12px"><b>Jawabanmu:</b> B • <b>Kunci:</b> B</div><div style="font-size:12px;color:#4a5a6a"><b>Pembahasan:</b> Cek fakta kanal resmi — BerAKHLAK literasi digital ASN.</div></div>
+          <div class="card" style="border-color:var(--pink)"><div style="font-weight:800;color:var(--pink)">2. [TIU] ❌ Salah</div><div style="font-size:12px"><b>Jawabanmu:</b> A • <b>Kunci:</b> C</div><div style="font-size:12px;color:#4a5a6a"><b>Pembahasan:</b> Deret n(n+1): 6→12→20 pola 3×4, 4×5, 5×6.</div></div>
+          <div class="card" style="border-color:#B0BEC5"><div style="font-weight:800;color:#7895B2">3. [TKP] ⬜ Belum dijawab</div><div style="font-size:12px"><b>Jawabanmu:</b> - • <b>Kunci:</b> B (5 poin)</div><div style="font-size:12px;color:#4a5a6a"><b>Pembahasan:</b> Skor TKP 5 jika tepat, 3/2/1 jika mendekati.</div></div>
+          <div class="card" style="background:var(--navy);color:#fff;text-align:center;font-size:12px">⬆ Scroll 110 soal lengkap • warna hijau/merah/abu</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="live">
+    <div class="live-head"><b>🔴 LIVE DEMO — buka di HP/Chrome (offline, tanpa install)</b><a href="../www/index.html" class="btn" style="padding:6px 10px;font-size:12px">Buka full page ↗</a></div>
+    <iframe src="../www/index.html" title="Live Demo"></iframe>
+  </section>
+
+  <p class="foot">C:/file ku/04-CPNS-Tryout — PRS 1000 bank (30+35+45 random 110) • Timer 100 menit • 301KB JSON • Mockup HTML ini di <code>docs/mockup_ui.html</code> • PNG di <code>docs/mockups/</code></p>
+</div>
+</body>
+</html>
