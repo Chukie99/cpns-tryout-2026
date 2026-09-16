@@ -28,6 +28,8 @@ jobs:
           npx cap add android || true
           npx cap copy android || true
           npx cap sync android || true
+      - name: Install Pillow
+        run: pip install Pillow
       - name: Apply custom icon
         run: |
           python3 - << 'PY'
