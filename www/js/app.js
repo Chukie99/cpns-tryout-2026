@@ -77,7 +77,21 @@ function renderQuestion(){
   const q=QUESTIONS[cur];
   qCat.textContent=q.cat;
   qProgress.textContent=(cur+1)+' / '+QUESTIONS.length;
+  // figural image if exists
+  let imgEl = document.getElementById('qImage');
+  if(!imgEl){
+    imgEl = document.createElement('img');
+    imgEl.id='qImage';
+    imgEl.style.cssText='max-width:100%;border:1px solid #E8DFCA;border-radius:8px;margin:8px 0;display:none';
+    qText.parentNode.insertBefore(imgEl, qText.nextSibling);
+  }
   qText.textContent=(cur+1)+'. '+q.prompt;
+  if(q.image){
+    imgEl.src = q.image;
+    imgEl.style.display='block';
+  } else {
+    imgEl.style.display='none';
+  }
   choicesEl.innerHTML='';
   const letters=['A','B','C','D'];
   q.choices.forEach((c,i)=>{
