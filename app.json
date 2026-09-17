@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "CPNS Tryout 2026",
+    "slug": "cpns-tryout-2026",
+    "version": "1.2.0",
+    "android": {
+      "versionCode": 33
+    },
+    "icon": "www/icon.png",
+    "primaryColor": "#0B8EC2",
+    "backgroundColor": "#0F2440",
+    "platforms": ["android"],
+    "plugins": [
+      {
+        "name": "@capacitor/dynamic-native-app-support",
+        "options": {}
+      }
+    ],
+    "extra": {
+      "basePath": "/"
+    },
+    "metadata": {
+      "owner": "SOPIAN",
+      "description": "Tryout CPNS 2026",
+      "repository": "https://github.com/Chukie99/cpns-tryout-2026"
+    },
+    "id": "test-id",
+    "plugins": [],
+    "hooks": {
+      "beforeBuild": {
+        "command": "echo $pwd"
+      },
+      "afterBuild": {
+        "command": "cp icon.png www/icon.png"
+      }
+    }
+  },
+  "scheme": "https://cpns-tryout-2026.pages.dev",
+  "cli": {
+    "version": "7.2.0"
+  },
+  "bundler": "webpack"
+}
