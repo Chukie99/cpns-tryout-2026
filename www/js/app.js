@@ -93,12 +93,11 @@ function renderQuestion(){
     imgEl.style.display='none';
   }
   choicesEl.innerHTML='';
-  const letters=['A','B','C','D'];
+  const letters=['A','B','C','D','E'];
   q.choices.forEach((c,i)=>{
     const div=document.createElement('div');
     div.className='choice'+(answers[cur]===i?' sel':'');
     div.onclick=()=>{ answers[cur]=i; saveState(); renderQuestion(); renderGrid(); };
-    div.innerHTML='<div class="bullet">'+letters[i]+'</div><div style="flex:1;font-size:14px">'+c+'</div>';
     choicesEl.appendChild(div);
   });
   $('#chkDoubt').checked=!!doubts[cur];
@@ -185,7 +184,7 @@ function renderReview(){
   list.innerHTML='';
   QUESTIONS.forEach((q,i)=>{
     const ans=answers[i];
-    const letters=['A','B','C','D'];
+    const letters=['A','B','C','D','E'];
     const ok = ans===q.correct;
     // TKP: ok = ans===correct (5 poin), else tetap dianggap belum sempurna
     const status = ans===null ? '⬜ Belum dijawab' : (ok ? '✅ Benar' : '❌ Salah');
